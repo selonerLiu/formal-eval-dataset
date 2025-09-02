@@ -1,0 +1,6 @@
+Needham-Schroeder public key protocol, with public and private keys. A and B are the two parties involved in the protocol.
+The security aim is that, after completion of the protocol, the two principals A and B should be convinced about the identity of their respective correspondent. 
+The flow of the protocol is as follows:
+A->B: aenc((Na,pk(skA)), pk(skB))
+B->A: aenc((Na,Nb), pk(skA))
+A->B: aenc(Nb, pk(skB))

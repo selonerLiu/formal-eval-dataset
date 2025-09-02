@@ -1,0 +1,10 @@
+Needham-Schroeder public key protocol, with public keys and private keys. A and B are the two parties involved in the protocol, and S is the trusted server.
+The security aim is that, after completion of the protocol, the two principals A and B should be convinced about the identity of their respective correspondent. 
+The flow of the protocol is as follows:
+Message 1: A -> S : (A, B)
+Message 2: S -> A : { pkB, B }skS
+Message 3: A -> B : { Na, A }pkB
+Message 4: B -> S : (B, A)
+Message 5: S -> B : { pkA, A }skS
+Message 6: B -> A : { Na, Nb }pkA
+Message 7: A -> B : { Nb }pkB

@@ -1,0 +1,8 @@
+The signed augmented EKE protocol. A and B are two parties that want to communicate securely.
+The security goal is that, under the premise that both parties only share a weak password, it is possible to achieve secure mutual authentication and negotiate a high-strength session key.
+The flow of the protocol is as follows:
+1. A->B: (hostA, {exp(g,RA)}pk(P))
+2. B->A: ({exp(g,RB)}pk(P), {challengeB}K)
+3. A->B: {challengeA, challengeB}K
+4. B->A: {challengeA}K
+5. A->B: {sign(K,P)}K

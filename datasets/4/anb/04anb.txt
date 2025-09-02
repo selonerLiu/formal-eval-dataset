@@ -1,0 +1,9 @@
+WooLam shared-key auth protocol 1992 Version of Gordon, Jeffrey. A and B are the two parties involved in the protocol, and S is the trusted server.
+The security goal is to authenticate the identity of A to B and vice versa.
+The flow of the protocol is as follows:
+A -> B : A
+B -> A : N
+A -> B : { m3, N }_kAS
+B -> S : { m4, A,{ m3, N }_kAS }_kBS
+S -> B : { m5, N }_kBS
+B: verify { m5, N }_kBS = the message from S
